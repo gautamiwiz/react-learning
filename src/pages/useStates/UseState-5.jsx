@@ -9,7 +9,7 @@ let someFunctionThatCalculatesInitialState = () => {
 };
 
 export default function UseState5() {
-  //insread pass this as a call back function.. it will only run once compared to the UseState4
+  //instead pass this as a call back function.. it will only run once compared to the UseState4
   const [name, setName] = useState(someFunctionThatCalculatesInitialState);
 
   let handleClick = () => {

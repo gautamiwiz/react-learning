@@ -1,12 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
+
   text-align: center;
 }
-body {
+/* body {
   background: #f3f3f3;
-}
+} */
 
 .card {
   background: white;
@@ -23,13 +24,31 @@ body {
   margin-bottom: 2rem;
 }
 
-.body {
+/* .body {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem 0.5rem;
   padding: 0 1rem;
-}
+} */
 
 .label {
   font-weight: bold;
+}
+
+.header {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 1rem;
+  padding-inline: 2rem;
+  padding-top: 2rem;
+}
+
+.footer {
+  border-top: 1px solid #efefef;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  padding-inline: 2rem;
+}
+
+main {
+  padding-inline: 2rem;
 }

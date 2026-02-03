@@ -8,8 +8,16 @@ export default function UseState1() {
   function handleClick() {
     console.log('Setting state from UseState 8...');
     setName('Gautam');
-    setAge(age + 1);
-    setAge(age + 1); // will set/increase the age only by 1 because React batches the state updates
+    //by using the set method as a function, we can get the current/latest state value
+    setAge((currentAge) => {
+      return currentAge + 2;
+    });
+    setAge((x) => {
+      return x + 2;
+    });
+    setAge((y) => {
+      return y + 1;
+    });
   }
 
   return (
