@@ -25,8 +25,14 @@ export default function UseStateLayout() {
         <div>
           <NavLink to="/use-state/type-7">Use State Type 7</NavLink>
         </div>
+        <div>
+          <NavLink to="/use-state/type-8">Use State Type 8</NavLink>
+        </div>
+        <div>
+          <NavLink to="/use-state/type-9">Use State Type 9</NavLink>
+        </div>
       </div>
-      <p>Notice the "usestate" menu not getting highlighted when you click on any of the submenu items. Check router page</p>
+      <p>Notice the "usestate" menu not getting highlighted when you click on any of the submenu items. Check navbar.jsx page</p>
       <Outlet context="Use State Layout context" />
     </>
   );

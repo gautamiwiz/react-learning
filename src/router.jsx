@@ -17,6 +17,18 @@ import UseState7 from './pages/useStates/UseState-7';
 import UseState8 from './pages/useStates/UseState-8';
 import UseState9 from './pages/useStates/UseState-9';
 
+import UseRefLayout from './components/UseRefLayout';
+import UseRef1 from './pages/useRef/UseRef-1';
+import UseRef2 from './pages/useRef/UseRef-2';
+
+import UseMemoLayout from './components/UseMemoLayout';
+import UseMemo1 from './pages/useMemo/UseMemo-1';
+import UseMemo2 from './pages/useMemo/UseMemo-2';
+
+import UseCallbackLayout from './components/UseCallback';
+import UseCallback1 from './pages/useCallback/UseCallback1';
+import UseCallback2 from './pages/useCallback/UseCallback2';
+
 // import Input1 from './pages/useStates/Input1';
 import App from './App';
 import Layout from './components/Layout';
@@ -26,6 +38,11 @@ import UseEffectLayout from './components/UseEffectLayout';
 import DynamicUrlParams from './pages/dynamic-url-params';
 import DynamicUrlParamsChildren from './pages/DynamicUrlParamsChildren';
 
+import UserComponent from './pages/User';
+import userData from './user.json';
+
+import UsersMultiple from './pages/UsersMultiple';
+
 //Note : Reg Hash router if needed later, you need if you do not have control over domain name
 export const router = createBrowserRouter([
   {
@@ -33,7 +50,6 @@ export const router = createBrowserRouter([
     errorElement: <div>Oops! There is some error. Please try again later.</div>,
     children: [
       { path: '/', element: <App /> },
-
       {
         path: '/use-effect/',
         element: <UseEffectLayout />,
@@ -49,7 +65,10 @@ export const router = createBrowserRouter([
           { path: 'type-6', element: <UseEffectHideUnhideActivity /> },
         ],
       },
-
+      { path: '/simple', element: <UserComponent userData={userData} /> },
+      { path: '/multiple-cards', element: <UsersMultiple /> },
+      { path: '/test/*', element: <h2>Test Page</h2> },
+      { path: '*', element: <h2>Any other route says 404</h2> },
       {
         path: '/use-state/',
         element: <UseStateLayout />,
@@ -67,6 +86,30 @@ export const router = createBrowserRouter([
       },
       { path: '/todolist', element: <ToDOList /> },
       { path: '/dynamic/', element: <DynamicUrlParams />, children: [{ path: ':id', element: <DynamicUrlParamsChildren /> }] },
+      {
+        path: '/use-ref/',
+        element: <UseRefLayout />,
+        children: [
+          { path: 'use-ref-type-1', element: <UseRef1 /> },
+          { path: 'use-ref-type-2', element: <UseRef2 /> },
+        ],
+      },
+      {
+        path: '/use-memo/',
+        element: <UseMemoLayout />,
+        children: [
+          { path: 'use-memo-type-1', element: <UseMemo1 /> },
+          { path: 'use-memo-type-2', element: <UseMemo2 /> },
+        ],
+      },
+      {
+        path: '/use-callback/',
+        element: <UseCallbackLayout />,
+        children: [
+          { path: 'use-callback-type-1', element: <UseCallback1 /> },
+          { path: 'use-callback-type-2', element: <UseCallback2 /> },
+        ],
+      },
     ],
   },
 ]);

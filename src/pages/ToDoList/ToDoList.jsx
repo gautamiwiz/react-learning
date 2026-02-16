@@ -40,7 +40,7 @@ function ToDOList() {
           <EachToDo key={todo.id} {...todo} status={todo.completed} deleteToDo={deleteToDoFunction} toggleToDo={toggleToDo} />
         ))}
       </ul>
-      <div id="new-todo-form">
+      <div id="new-todo-form" style={{ margin: '0 auto' }}>
         <label htmlFor="todo-input">New Todo</label>
         <input type="text" id="todo-input" value={newToDo} onChange={(e) => setNewToDo(e.target.value)} />
         <button onClick={addTheTodo}>Add Todo</button>

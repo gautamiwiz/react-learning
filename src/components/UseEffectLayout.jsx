@@ -23,7 +23,7 @@ export default function UseEffectLayout() {
           <NavLink to="/use-effect/type-6">Use Effect Type 6</NavLink>
         </div>
       </div>
-      <Outlet />
+      <Outlet context={{ name: 'gautam' }} />
     </>
   );
 }

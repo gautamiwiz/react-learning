@@ -2,16 +2,25 @@
   {
     "id": 1,
     "name": "John Doe",
-    "email": "john.doe@example.com"
+    "email": "john.doe@example.com",
+    "age": 30,
+    "address": "asdf",
+    "phone": "555-1234"
   },
   {
     "id": 2,
     "name": "Jane Smith",
-    "email": "jane.smith@example.com"
+    "email": "jane.smith@example.com",
+    "age": 30,
+    "address": "asdf",
+    "phone": "555-5678"
   },
   {
     "id": 3,
     "name": "Gautam Sharma",
-    "email": "gautam.sharma@iwiz.in"
+    "email": "gautam.sharma@iwiz.in",
+    "age": 35,
+    "address": "asdf",
+    "phone": "555-9012"
   }
 ]

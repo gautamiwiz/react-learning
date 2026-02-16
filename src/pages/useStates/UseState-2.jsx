@@ -13,7 +13,7 @@ export default function UseState2() {
 
   let setCountCallThisFunction = () => {
     console.log('Setting count from UseState 2...');
-    setCount(count + 1);
+    setCount((c) => c + 1);
   };
 
   return (

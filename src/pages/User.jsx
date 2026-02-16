@@ -6,7 +6,7 @@ export default function UserComponent({ userData }) {
         <div className="label">Age:</div>
         <div>{userData.age}</div>
         <div className="label">Phone:</div>
-        <div>{userData.phoneNumber}</div>
+        <div>{userData.phone}</div>
         <div className="label">Address:</div>
         <div>{userData.address}</div>
       </div>

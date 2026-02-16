@@ -16,7 +16,17 @@
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   max-width: 400px;
   padding: 1.5rem;
-  font-family: Arial;
+  margin: 0 auto;
+}
+
+.card + .card {
+  margin-top: 2rem;
+}
+
+.card .body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .name {

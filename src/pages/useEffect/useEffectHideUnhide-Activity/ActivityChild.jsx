@@ -22,7 +22,7 @@ export default function ActivityChild() {
 
   return (
     <>
-      <p onClick={() => setCount((c) => c + 1)}>I am child component, count : {count}</p>
+      <p onClick={() => setCount((c) => c + 1)}>I am child - component, count : {count}</p>
     </>
   );
 }
