@@ -1,5 +1,6 @@
 import users from '../users.json';
-import { Link, Outlet } from 'react-router';
+import { Link, NavLink, Outlet } from 'react-router';
+import DynamicUrlParamsChildren from './DynamicUrlParamsChildren';
 
 export default function DynamicUrlParams() {
   return (
@@ -7,11 +8,13 @@ export default function DynamicUrlParams() {
       <ul>
         {users.map((user) => (
           <li key={user.id}>
+            {/* <NavLink to={`/dynamic/${user.id}`}>{user.name}</NavLink> */}
             <Link to={`/dynamic/${user.id}`}>{user.name}</Link>
           </li>
         ))}
       </ul>
-      <Outlet />
+      <DynamicUrlParamsChildren />
+      {/* <Outlet /> */}
     </>
   );
 }

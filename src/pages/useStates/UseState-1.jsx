@@ -14,7 +14,9 @@ export default function UseState1() {
   return (
     <div>
       <h3>{outletVariable}</h3>
-      <button onClick={() => setCount(count + 1)}>Use State type 1 - Count : {count}</button>
+      <button id="gautam" onClick={() => setCount(count + 1)}>
+        Use State type 1 - Count : {count}
+      </button>
 
       <button onClick={() => setCounter2((c) => c + 1)}>Use State type 1 - Counter2 : {counter2}</button>
     </div>

@@ -7,7 +7,6 @@ export default function UseMemo1() {
   // It is used to memoize the value of a function so that it is not re-evaluated on every render.
   // It is used to avoid expensive calculations on every render.
   // It is used to avoid re-rendering of child components when the parent component re-renders.
-  // It is used to avoid re-rendering of child components when the parent component re-renders
   // and the child component does not need to be re-rendered.
 
   //to simulate this, go to dev tools, performance tab and reduce the cpu to 6x slower

@@ -43,6 +43,11 @@ import userData from './user.json';
 
 import UsersMultiple from './pages/UsersMultiple';
 
+import { Navigate } from 'react-router';
+
+//Note : Reg Hash router, if you dont have control over domain... it only does xyz.com/#/route1, xyz.com/#/route2
+//Note : reg memory router, it stores the route in memory and does not read or write to address bar, it is used for testing purpose only, it does not cause page reload but it also does not change the url in address bar
+
 //Note : Reg Hash router if needed later, you need if you do not have control over domain name
 export const router = createBrowserRouter([
   {
@@ -68,7 +73,11 @@ export const router = createBrowserRouter([
       { path: '/simple', element: <UserComponent userData={userData} /> },
       { path: '/multiple-cards', element: <UsersMultiple /> },
       { path: '/test/*', element: <h2>Test Page</h2> },
-      { path: '*', element: <h2>Any other route says 404</h2> },
+
+      // { path: '*', element: <h2>Any other route says 404</h2> },
+      //or
+
+      { path: '*', element: <Navigate to="/" /> },
       {
         path: '/use-state/',
         element: <UseStateLayout />,
@@ -85,7 +94,7 @@ export const router = createBrowserRouter([
         ],
       },
       { path: '/todolist', element: <ToDOList /> },
-      { path: '/dynamic/', element: <DynamicUrlParams />, children: [{ path: ':id', element: <DynamicUrlParamsChildren /> }] },
+      { path: '/dynamic/', element: <DynamicUrlParams />, children: [{ path: ':id' }] },
       {
         path: '/use-ref/',
         element: <UseRefLayout />,
