@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router';
+import {NavLink, Outlet} from 'react-router';
 
 export default function UseStateLayout() {
   return (
@@ -32,8 +32,11 @@ export default function UseStateLayout() {
           <NavLink to="/use-state/type-9">Use State Type 9</NavLink>
         </div>
       </div>
-      <p>Notice the "usestate" menu not getting highlighted when you click on any of the submenu items. Check navbar.jsx page</p>
-      <Outlet context="Use State Layout context" />
+      <p>
+        Notice the "usestate" menu not getting highlighted when you click on any
+        of the submenu items. Check navbar.jsx page
+      </p>
+      <Outlet context="Use State Layout context - test" />
     </>
   );
 }

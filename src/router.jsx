@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import {createBrowserRouter} from 'react-router';
 import ToDOList from './pages/ToDoList/ToDoList';
 import UseEffect1 from './pages/useEffect/UseEffect-1';
 import UseEffectJsonAPI2 from './pages/useEffect/UseEffectJsonAPI-2';
@@ -43,7 +43,9 @@ import userData from './user.json';
 
 import UsersMultiple from './pages/UsersMultiple';
 
-import { Navigate } from 'react-router';
+import QueueManagement from './components/Queue-managements-components/QueueManagement';
+
+import {Navigate} from 'react-router';
 
 //Note : Reg Hash router, if you dont have control over domain... it only does xyz.com/#/route1, xyz.com/#/route2
 //Note : reg memory router, it stores the route in memory and does not read or write to address bar, it is used for testing purpose only, it does not cause page reload but it also does not change the url in address bar
@@ -54,7 +56,7 @@ export const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <div>Oops! There is some error. Please try again later.</div>,
     children: [
-      { path: '/', element: <App /> },
+      {path: '/', element: <App />},
       {
         path: '/use-effect/',
         element: <UseEffectLayout />,
@@ -62,62 +64,70 @@ export const router = createBrowserRouter([
           // { path: '', element: <UseEffect1 /> },
           //or
           //   { index: true, element: <UseEffect1 /> },
-          { path: 'type-1', element: <UseEffect1 /> },
-          { path: 'type-2', element: <UseEffectJsonAPI2 /> },
-          { path: 'type-3', element: <UseEffectJsonAPI3 /> },
-          { path: 'type-4', element: <HideUnhide /> },
-          { path: 'type-5', element: <HideUnhideDiv /> },
-          { path: 'type-6', element: <UseEffectHideUnhideActivity /> },
+          {path: 'type-1', element: <UseEffect1 />},
+          {path: 'type-2', element: <UseEffectJsonAPI2 />},
+          {path: 'type-3', element: <UseEffectJsonAPI3 />},
+          {path: 'type-4', element: <HideUnhide />},
+          {path: 'type-5', element: <HideUnhideDiv />},
+          {path: 'type-6', element: <UseEffectHideUnhideActivity />},
         ],
       },
-      { path: '/simple', element: <UserComponent userData={userData} /> },
-      { path: '/multiple-cards', element: <UsersMultiple /> },
-      { path: '/test/*', element: <h2>Test Page</h2> },
+      {path: '/simple', element: <UserComponent userData={userData} />},
+      {path: '/multiple-cards', element: <UsersMultiple />},
+      {path: '/test/*', element: <h2>Test Page</h2>},
 
       // { path: '*', element: <h2>Any other route says 404</h2> },
       //or
 
-      { path: '*', element: <Navigate to="/" /> },
+      {path: '*', element: <Navigate to="/" />},
       {
         path: '/use-state/',
         element: <UseStateLayout />,
         children: [
-          { path: 'type-1', element: <UseState1 /> },
-          { path: 'type-2', element: <UseState2 /> },
-          { path: 'type-3', element: <UseState3 /> },
-          { path: 'type-4', element: <UseState4 /> },
-          { path: 'type-5', element: <UseState5 /> },
-          { path: 'type-6', element: <UseState6 /> },
-          { path: 'type-7', element: <UseState7 /> },
-          { path: 'type-8', element: <UseState8 /> },
-          { path: 'type-9', element: <UseState9 /> },
+          {path: 'type-1', element: <UseState1 />},
+          {path: 'type-2', element: <UseState2 />},
+          {path: 'type-3', element: <UseState3 />},
+          {path: 'type-4', element: <UseState4 />},
+          {path: 'type-5', element: <UseState5 />},
+          {path: 'type-6', element: <UseState6 />},
+          {path: 'type-7', element: <UseState7 />},
+          {path: 'type-8', element: <UseState8 />},
+          {path: 'type-9', element: <UseState9 />},
         ],
       },
-      { path: '/todolist', element: <ToDOList /> },
-      { path: '/dynamic/', element: <DynamicUrlParams />, children: [{ path: ':id' }] },
+      {path: '/todolist', element: <ToDOList />},
+      {
+        path: '/dynamic/',
+        element: <DynamicUrlParams />,
+        children: [{path: ':id'}],
+      },
       {
         path: '/use-ref/',
         element: <UseRefLayout />,
         children: [
-          { path: 'use-ref-type-1', element: <UseRef1 /> },
-          { path: 'use-ref-type-2', element: <UseRef2 /> },
+          {path: 'use-ref-type-1', element: <UseRef1 />},
+          {path: 'use-ref-type-2', element: <UseRef2 />},
         ],
       },
       {
         path: '/use-memo/',
         element: <UseMemoLayout />,
         children: [
-          { path: 'use-memo-type-1', element: <UseMemo1 /> },
-          { path: 'use-memo-type-2', element: <UseMemo2 /> },
+          {path: 'use-memo-type-1', element: <UseMemo1 />},
+          {path: 'use-memo-type-2', element: <UseMemo2 />},
         ],
       },
       {
         path: '/use-callback/',
         element: <UseCallbackLayout />,
         children: [
-          { path: 'use-callback-type-1', element: <UseCallback1 /> },
-          { path: 'use-callback-type-2', element: <UseCallback2 /> },
+          {path: 'use-callback-type-1', element: <UseCallback1 />},
+          {path: 'use-callback-type-2', element: <UseCallback2 />},
         ],
+      },
+      {
+        path: '/queue-management/',
+        element: <QueueManagement />,
       },
     ],
   },

@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router';
+import {NavLink} from 'react-router';
 
 function Navbar() {
   return (
-    <nav style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+    <nav style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
       <div>
         <NavLink to="/">Home</NavLink>
       </div>
@@ -39,8 +39,9 @@ function Navbar() {
       <div>
         <NavLink to="/test/asdf/asdf">Test</NavLink>
       </div>
-
-
+      <div>
+        <NavLink to="/queue-management">Queue management</NavLink>
+      </div>
     </nav>
   );
 }
