@@ -2,7 +2,14 @@ import {NavLink} from 'react-router';
 
 function Navbar() {
   return (
-    <nav style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+    <nav
+      style={{
+        display: 'flex',
+        gap: '1rem',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+      }}
+    >
       <div>
         <NavLink to="/">Home</NavLink>
       </div>
@@ -41,6 +48,12 @@ function Navbar() {
       </div>
       <div>
         <NavLink to="/queue-management">Queue management</NavLink>
+      </div>
+      <div>
+        <NavLink to="/basic-props">Basic props</NavLink>
+      </div>
+      <div>
+        <NavLink to="/children-props">Children props</NavLink>
       </div>
     </nav>
   );

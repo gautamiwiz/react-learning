@@ -1,5 +1,3 @@
-import './App.css';
-// import Layout from './components/Layout';
 import {useEffect, useState} from 'react';
 // import {Link, NavLink} from 'react-router';
 
@@ -16,7 +14,7 @@ export default function App() {
   let [setCountTo, setSetCountTo] = useState(0);
   return (
     <form>
-      <h1>Count is {count} </h1>
+      <h2>Count is {count} </h2>
       <div
         style={{
           display: 'flex',
@@ -26,6 +24,7 @@ export default function App() {
         }}
       >
         <button
+          className="px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
             setCount((c) => c + 1);
@@ -34,6 +33,7 @@ export default function App() {
           Increase
         </button>
         <button
+          className="px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-red-500 hover:bg-red-600 text-white cursor-pointer"
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -43,6 +43,7 @@ export default function App() {
           Decrease
         </button>
         <button
+          className="px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-orange-500 hover:bg-orange-600 text-white cursor-pointer"
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -58,11 +59,13 @@ export default function App() {
           gap: '5px',
           alignItems: 'center',
           justifyContent: 'center',
+          marginTop: '1rem',
         }}
       >
         <input
           type="text"
           value={setCountTo}
+          className="block min-w-0 py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
           style={{
             border: '1px solid grey',
             height: '30px',
@@ -72,7 +75,11 @@ export default function App() {
             setSetCountTo(e.target.value);
           }}
         />
-        <button type="button" onClick={() => setCount(Number(setCountTo))}>
+        <button
+          className="px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-green-500 hover:bg-green-600 text-white cursor-pointer"
+          type="button"
+          onClick={() => setCount(Number(setCountTo))}
+        >
           Set to {setCountTo}
         </button>
       </div>

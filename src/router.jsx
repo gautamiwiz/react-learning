@@ -47,6 +47,9 @@ import QueueManagement from './components/Queue-managements-components/QueueMana
 
 import {Navigate} from 'react-router';
 
+import BasicProps from './pages/inputs/Basic-Props';
+import ChildrenProps from './pages/Children-props';
+
 //Note : Reg Hash router, if you dont have control over domain... it only does xyz.com/#/route1, xyz.com/#/route2
 //Note : reg memory router, it stores the route in memory and does not read or write to address bar, it is used for testing purpose only, it does not cause page reload but it also does not change the url in address bar
 
@@ -128,6 +131,14 @@ export const router = createBrowserRouter([
       {
         path: '/queue-management/',
         element: <QueueManagement />,
+      },
+      {
+        path: '/basic-props/',
+        element: <BasicProps />,
+      },
+      {
+        path: '/children-props/',
+        element: <ChildrenProps />,
       },
     ],
   },

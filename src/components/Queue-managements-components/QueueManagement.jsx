@@ -1,8 +1,6 @@
 import Form from './Form';
 import List from './List';
 
-import './queue.css';
-
 import {useState} from 'react';
 
 function QueueManagement() {
