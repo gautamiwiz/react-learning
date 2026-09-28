@@ -15,13 +15,22 @@ export default function UseState1() {
   return (
     <div>
       <h3>{outletVariable}</h3>
-      <button id="gautam" onClick={() => setCountA(countA + 1)}>
-        Use State Count A : {countA}
-      </button>
+      <div className="flex flex-wrap gap-3">
+        <button
+          id="gautam"
+          className="min-w-56 cursor-pointer rounded-md border border-blue-700 bg-blue-600 px-5 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-blue-800"
+          onClick={() => setCountA(countA + 1)}
+        >
+          Use State Count A: {countA}
+        </button>
 
-      <button onClick={() => setCountB((c) => c + 1)}>
-        Use State Count B : {countB}
-      </button>
+        <button
+          className="min-w-56 cursor-pointer rounded-md border border-emerald-700 bg-emerald-600 px-5 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 active:bg-emerald-800"
+          onClick={() => setCountB((c) => c + 1)}
+        >
+          Use State Count B: {countB}
+        </button>
+      </div>
     </div>
   );
 }
