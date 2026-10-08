@@ -32,10 +32,11 @@ export default function UseStateLayout() {
           <NavLink to="/use-state/type-9">Use State Type 9</NavLink>
         </div>
       </div>
-      <p>
+      <p style={{paddingBottom: '10px'}}>
         Notice the "usestate" menu not getting highlighted when you click on any
         of the submenu items. Check navbar.jsx page
       </p>
+      <hr style={{paddingTop: '10px', paddingBottom: '10px'}} />
       <Outlet context="Use State Layout context - test" />
     </>
   );

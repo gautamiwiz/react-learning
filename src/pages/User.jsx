@@ -1,13 +1,4 @@
-// import { useNavigate } from 'react-router-dom';
-// import { useEffect } from 'react';
-
-export default function UserComponent({ userData }) {
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   navigate('/');
-  // }, [navigate]);
-
+export default function UserComponent({userData}) {
   return (
     <div className="card">
       <h2 className="name">{userData.name}</h2>

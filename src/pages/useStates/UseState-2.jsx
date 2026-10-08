@@ -6,7 +6,7 @@ export default function UseState2() {
   //initial state calculation function
   let someFunctionThatCalculatesInitialState = () => {
     console.log('Calculating initial state UseState 2...');
-    return 5;
+    return 2;
   };
 
   const [count, setCount] = useState(someFunctionThatCalculatesInitialState);
